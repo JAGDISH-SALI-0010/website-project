@@ -12,6 +12,19 @@
   margin: 0 auto;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0071e3;
+  opacity: 0.9;
+}
+
 .title {
   font-size: 4.5rem;
   font-weight: 700;
