@@ -1,0 +1,46 @@
+import SectionHeading from "@/components/shared/SectionHeading";
+import { getCategories, resources } from "@/data/resources";
+import Link from "next/link";
+import styles from "./Categories.module.css";
+
+export const metadata = {
+  title: "Categories | Python Resources Hub",
+  description: "Browse Python resources by category.",
+};
+
+export default function CategoriesPage() {
+  const categories = getCategories();
+  
+  // Count resources per category
+  const categoryCounts = categories.reduce((acc, cat) => {
+    acc[cat] = resources.filter(r => r.category === cat).length;
+    return acc;
+  }, {});
+
+  return (
+    <div className="fade-in" style={{ padding: "4rem 0" }}>
+      <div className="container">
+        <SectionHeading 
+          title="Browse by Category" 
+          subtitle="Find exactly what you're looking for by selecting a topic." 
+        />
+        
+        <div className={styles.grid}>
+          {categories.map((category, index) => (
+            <Link 
+              href="/resources" 
+              key={category} 
+              className={`${styles.card} slide-up`}
+              style={{ animationDelay: `${(index % 4) * 0.1}s` }}
+            >
+              <h3 className={styles.title}>{category}</h3>
+              <p className={styles.count}>
+                {categoryCounts[category]} {categoryCounts[category] === 1 ? 'Resource' : 'Resources'}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

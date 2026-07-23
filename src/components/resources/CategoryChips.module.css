@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.chip {
+  background-color: var(--chip-bg);
+  color: var(--foreground);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  background-color: var(--chip-hover);
+}
+
+.chip.active {
+  background-color: var(--chip-active-bg);
+  color: var(--chip-active-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

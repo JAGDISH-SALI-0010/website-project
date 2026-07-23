@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--nav-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem; /* ~56px */
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.015em;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 0.85rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  font-weight: 400;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .links {
+    gap: 1rem;
+  }
+}

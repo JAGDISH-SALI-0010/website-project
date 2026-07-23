@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px; /* Pill shape for Apple style */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: var(--primary-btn);
+  color: var(--primary-btn-text);
+}
+
+.primary:hover {
+  background-color: var(--primary-btn-hover);
+  transform: scale(1.02);
+}
+
+.secondary {
+  background-color: var(--secondary-btn);
+  color: var(--foreground);
+}
+
+.secondary:hover {
+  background-color: var(--secondary-btn-hover);
+}
