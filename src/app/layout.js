@@ -3,14 +3,15 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter", 
+  variable: "--font-inter",
 });
 
 export const metadata = {
-  title: "Python Resources Hub",
-  description: "A centralized hub for discovering high-quality Python learning resources.",
+  title: "PyDisciple",
+  description:
+    "Master Python with carefully curated resources, roadmaps, documentation, and learning guides.",
 };
 
 export default function RootLayout({ children }) {

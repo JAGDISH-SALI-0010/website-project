@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.content}>
           <p className={styles.text}>
-            &copy; {new Date().getFullYear()} Python Resources Hub. Built for the community.
+            &copy; {new Date().getFullYear()} PyDisciple. Built for the community.
           </p>
         </div>
       </div>

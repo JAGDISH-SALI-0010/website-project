@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo}>
-            Python Resources
+            PyDisciple
           </Link>
           <ul className={styles.links}>
             <li>
