@@ -4,8 +4,8 @@ import Link from "next/link";
 import styles from "./Categories.module.css";
 
 export const metadata = {
-  title: "Categories | Python Resources Hub",
-  description: "Browse Python resources by category.",
+  title: "Categories | PyDisciple",
+  description: "Browse curated Python learning categories on PyDisciple.",
 };
 
 export default function CategoriesPage() {

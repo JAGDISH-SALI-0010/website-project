@@ -2,8 +2,8 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import ResourceDirectory from "@/components/resources/ResourceDirectory";
 
 export const metadata = {
-  title: "All Resources | Python Resources Hub",
-  description: "Browse all curated Python resources including courses, books, and tutorials.",
+  title: "Resources | PyDisciple",
+ description: "Browse curated Python resources, books, courses, documentation, roadmaps, and tools on PyDisciple.",
 };
 
 export default function ResourcesPage() {
