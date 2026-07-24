@@ -118,7 +118,19 @@ export const resources = [
     website: "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/",
     tags: ["advanced", "idiomatic"],
     featured: false
-  }
+  },
+  {
+  id: "11",
+  slug: "codeflowrecords-youtube",
+  title: "CodeflowRecords",
+  description: "Programming tutorials, coding projects, and developer content from the creator of PyDisciple.",
+  category: "YouTube Channels",
+  difficulty: "Beginner",
+  image: null,
+  website: "https://www.youtube.com/@CodeflowRecords",
+  tags: ["video", "creator", "programming"],
+  featured: false
+}
 ];
 
 export const getFeaturedResources = () => resources.filter(r => r.featured);

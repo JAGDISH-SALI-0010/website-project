@@ -31,7 +31,9 @@ export default function ResourceCard({ resource }) {
         
         <div className={styles.footer}>
           <Button href={resource.website} variant="secondary" className={styles.button}>
-            Official Website
+            {resource.category === "YouTube Channels"
+              ? "Visit Channel"
+              : "Official Website"}
           </Button>
         </div>
       </div>
