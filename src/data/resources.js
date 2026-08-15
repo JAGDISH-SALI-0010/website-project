@@ -86,12 +86,12 @@ export const resources = [
   {
     id: "8",
     slug: "python-cheatsheet",
-    title: "Python Cheat Sheet",
-    description: "A comprehensive cheat sheet for Python's core features and standard libraries.",
+    title: "Python Cheat Sheets By WebsiteSetup",
+    description: "This reference sheet covers essential Python concepts for beginners, including syntax, control flow, functions, and common libraries. It’s perfect for quick lookups while you’re learning.",
     category: "Cheat Sheets",
     difficulty: "Beginner",
     image: null,
-    website: "https://www.pythoncheatsheet.org",
+    website: "https://drive.google.com/file/d/1eoLWQc-sIO-HHWaxjGqeV56aAYB4QH12/view?usp=sharing",
     tags: ["quick-reference", "syntax"],
     featured: false
   },
@@ -129,7 +129,19 @@ export const resources = [
   image: null,
   website: "https://www.youtube.com/@CodeflowRecords",
   tags: ["video", "creator", "programming"],
-  featured: false
+  featured: true
+},
+{
+  id: "12",
+  slug: "beginners-python-cheat-sheet",
+  title: "Beginners Python Cheat Sheet",
+  description: "This comprehensive cheat sheet covers essential Python concepts for beginners, including syntax, control flow, functions, and common libraries. It’s perfect for quick lookups while you’re learning.",
+  category: "Cheat Sheets",
+  difficulty: "Beginner",
+  image: null,
+  website: "https://drive.google.com/file/d/1SH87ZgM2uIHn8fLDJAMkLaWfF3NTyQLy/view?usp=sharing",
+  tags: ["quick-reference", "syntax", "beginner"],
+  featured: true
 }
 ];
 
