@@ -130,8 +130,8 @@ export const resources = [
   website: "https://www.youtube.com/@CodeflowRecords",
   tags: ["video", "creator", "programming"],
   featured: true
-},
-{
+ },
+ {
   id: "12",
   slug: "beginners-python-cheat-sheet",
   title: "Beginners Python Cheat Sheet",
@@ -142,7 +142,115 @@ export const resources = [
   website: "https://drive.google.com/file/d/1SH87ZgM2uIHn8fLDJAMkLaWfF3NTyQLy/view?usp=sharing",
   tags: ["quick-reference", "syntax", "beginner"],
   featured: true
-}
+ },
+{
+    id: "13",
+    slug: "official-NumPy-docs",
+    title: "NumPy Documentation",
+    description: "The official documentation for NumPy. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://numpy.org/doc/stable/",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+    id: "14",
+    slug: "official-pandas-docs",
+    title: "Pandas Documentation",
+    description: "The official documentation for Pandas. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://pandas.pydata.org/docs/",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+    id: "15",
+    slug: "official-matplotlib-docs",
+    title: "Matplotlib Documentation",
+    description: "The official documentation for Matplotlib. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://matplotlib.org/stable/index.html",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+  id: "16",
+  slug: "official-seaborn-docs",
+  title: "Seaborn Documentation",
+  description: "The official documentation for Seaborn. Comprehensive and authoritative.",
+  category: "Official Documentation",
+  difficulty: "All Levels",
+  image: null,
+  website: "https://seaborn.pydata.org/index.html",
+  tags: ["reference", "official", "core"],
+  featured: true
+ },
+ {
+  id: "17",
+  slug: "official-statsmodels-docs",
+  title: "StatsModels Documentation",
+  description: "The official documentation for StatsModels. Comprehensive and authoritative.",
+  category: "Official Documentation",
+  difficulty: "All Levels",
+  image: null,
+  website: "https://www.statsmodels.org/stable/index.html",
+  tags: ["reference", "official", "core"],
+  featured: true
+ },
+ {
+    id: "18",
+    slug: "official-scikit-learn-docs",
+    title: "Scikit-Learn Documentation",
+    description: "The official documentation for Scikit-Learn. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://scikit-learn.org/stable/index.html",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+    id: "19",
+    slug: "official-pytorch-docs",
+    title: "PyTorch Documentation",
+    description: "The official documentation for PyTorch. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://pytorch.org/docs/stable/index.html",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+    id: "20",
+    slug: "official-tensorflow-docs",
+    title: "TensorFlow Documentation",
+    description: "The official documentation for TensorFlow. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://www.tensorflow.org/",
+    tags: ["reference", "official", "core"],
+    featured: true
+ },
+ {
+    id: "21",
+    slug: "official-keras-docs",
+    title: "Keras Documentation",
+    description: "The official documentation for Keras. Comprehensive and authoritative.",
+    category: "Official Documentation",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://keras.io/",
+    tags: ["reference", "official", "core"],
+    featured: true
+ }
 ];
 
 export const getFeaturedResources = () => resources.filter(r => r.featured);
