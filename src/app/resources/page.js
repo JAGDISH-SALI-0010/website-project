@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/shared/SectionHeading";
 import ResourceDirectory from "@/components/resources/ResourceDirectory";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Resources | PyDisciple",
@@ -14,7 +15,9 @@ export default function ResourcesPage() {
           title="Python Resources" 
           subtitle="Explore our comprehensive directory of the best Python learning materials available on the web." 
         />
-        <ResourceDirectory />
+        <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading resources...</div>}>
+          <ResourceDirectory />
+        </Suspense>
       </div>
     </div>
   );

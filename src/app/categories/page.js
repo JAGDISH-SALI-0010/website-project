@@ -28,7 +28,7 @@ export default function CategoriesPage() {
         <div className={styles.grid}>
           {categories.map((category, index) => (
             <Link 
-              href="/resources" 
+              href={`/resources?category=${encodeURIComponent(category)}`} 
               key={category} 
               className={`${styles.card} slide-up`}
               style={{ animationDelay: `${(index % 4) * 0.1}s` }}

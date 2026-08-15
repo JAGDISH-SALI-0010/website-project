@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import styles from "./ResourceDirectory.module.css";
 import SearchBar from "./SearchBar";
 import CategoryChips from "./CategoryChips";
@@ -9,8 +10,17 @@ import EmptyState from "./EmptyState";
 import { resources, getCategories } from "@/data/resources";
 
 export default function ResourceDirectory() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(categoryParam || "All");
+
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [categoryParam]);
 
   const categories = getCategories();
 
