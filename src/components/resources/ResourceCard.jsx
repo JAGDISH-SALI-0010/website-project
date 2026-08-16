@@ -16,14 +16,41 @@ export default function ResourceCard({ resource }) {
     }
   };
 
+  // Determine Format tag label and icon
+  const getFormatLabel = () => {
+    if (resource.format && resource.fileSize) {
+      return `📄 ${resource.format} • ${resource.fileSize}`;
+    }
+    if (resource.format) {
+      return `📄 ${resource.format}`;
+    }
+    if (resource.category === "Books") return "📄 PDF Book";
+    if (resource.category === "Cheat Sheets") return "📋 PDF Sheet";
+    if (resource.category === "YouTube Channels") return "🎥 Video Series";
+    if (resource.category === "Courses") return "🎓 Interactive Course";
+    return "🌐 Web Resource";
+  };
+
+  // Smart Button Label
+  const getButtonText = () => {
+    if (resource.category === "YouTube Channels") return "Visit Channel ↗";
+    if (resource.category === "Books") return "Open PDF / Drive ↗";
+    if (resource.category === "Cheat Sheets") return "Open Cheat Sheet ↗";
+    if (resource.category === "Official Documentation") return "View Docs ↗";
+    return "Official Website ↗";
+  };
+
   return (
     <article className={styles.card}>
       <div className={styles.content}>
         <div className={styles.header}>
-          <Badge variant="default">{resource.category}</Badge>
-          <Badge variant={getDifficultyVariant(resource.difficulty)}>
-            {resource.difficulty}
-          </Badge>
+          <div className={styles.badgesLeft}>
+            <Badge variant="default">{resource.category}</Badge>
+            <Badge variant={getDifficultyVariant(resource.difficulty)}>
+              {resource.difficulty}
+            </Badge>
+          </div>
+          <span className={styles.formatBadge}>{getFormatLabel()}</span>
         </div>
         
         <h3 className={styles.title}>{resource.title}</h3>
@@ -31,9 +58,7 @@ export default function ResourceCard({ resource }) {
         
         <div className={styles.footer}>
           <Button href={resource.website} variant="secondary" className={styles.button}>
-            {resource.category === "YouTube Channels"
-              ? "Visit Channel"
-              : "Official Website"}
+            {getButtonText()}
           </Button>
         </div>
       </div>
