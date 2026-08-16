@@ -1,17 +1,23 @@
 import styles from "./SearchBar.module.css";
 
-export default function SearchBar({ value, onChange }) {
+export default function SearchBar({ value, onChange, onSubmit }) {
   return (
-    <div className={styles.container}>
-      <svg 
-        className={styles.icon} 
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
+    <form
+      className={styles.container}
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (onSubmit) onSubmit(value);
+      }}
+    >
+      <svg
+        className={styles.icon}
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
         strokeLinejoin="round"
       >
         <circle cx="11" cy="11" r="8"></circle>
@@ -19,11 +25,12 @@ export default function SearchBar({ value, onChange }) {
       </svg>
       <input
         type="text"
+        name="search"
         className={styles.input}
         placeholder="Search resources by title..."
         value={value}
         onChange={(e) => onChange(e.target.value)}
       />
-    </div>
+    </form>
   );
 }

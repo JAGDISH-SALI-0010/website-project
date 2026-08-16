@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import styles from "./ResourceDirectory.module.css";
 import SearchBar from "./SearchBar";
 import CategoryChips from "./CategoryChips";
@@ -10,43 +10,68 @@ import EmptyState from "./EmptyState";
 import { resources, getCategories } from "@/data/resources";
 
 export default function ResourceDirectory() {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const categoryParam = searchParams.get('category');
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(categoryParam || "All");
+  const categoryParam = searchParams.get("category") || "All";
+  const searchParam = searchParams.get("search") || "";
+
+  const [searchQuery, setSearchQuery] = useState(searchParam);
 
   useEffect(() => {
-    if (categoryParam) {
-      setSelectedCategory(categoryParam);
-    }
-  }, [categoryParam]);
+    setSearchQuery(searchParam);
+  }, [searchParam]);
 
   const categories = getCategories();
 
+  const handleSearchSubmit = (text) => {
+    const params = new URLSearchParams();
+    if (categoryParam.toLowerCase() !== "all") {
+      params.set("category", categoryParam.toLowerCase());
+    }
+    if (text && text.trim() !== "") {
+      params.set("search", text.trim());
+    }
+    const queryStr = params.toString();
+    router.push(queryStr ? `/resources?${queryStr}` : "/resources");
+  };
+
   const filteredResources = useMemo(() => {
+    const activeCategory = categoryParam.toLowerCase();
+    const query = searchQuery.trim().toLowerCase();
+
     return resources.filter((resource) => {
-      const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            resource.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === "All" || resource.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesCategory =
+        activeCategory === "all" ||
+        resource.category?.toLowerCase() === activeCategory;
+
+      const matchesSearch =
+        !query ||
+        resource.title?.toLowerCase().includes(query) ||
+        resource.description?.toLowerCase().includes(query);
+
+      return matchesCategory && matchesSearch;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, categoryParam]);
 
   const handleClear = () => {
     setSearchQuery("");
-    setSelectedCategory("All");
+    router.push("/resources");
   };
 
   return (
     <div className={styles.directory}>
-      <SearchBar value={searchQuery} onChange={setSearchQuery} />
-      <CategoryChips 
-        categories={categories} 
-        selectedCategory={selectedCategory} 
-        onSelect={setSelectedCategory} 
+      <SearchBar
+        value={searchQuery}
+        onChange={setSearchQuery}
+        onSubmit={handleSearchSubmit}
       />
-      
+      <CategoryChips
+        categories={categories}
+        selectedCategory={categoryParam}
+        searchQuery={searchQuery}
+      />
+
       {filteredResources.length > 0 ? (
         <div className={styles.grid}>
           {filteredResources.map((resource) => (
