@@ -15,6 +15,17 @@
   height: 3.5rem; /* ~56px */
 }
 
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.themeToggleWrapper {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-weight: 600;
   font-size: 1.125rem;
@@ -80,19 +91,24 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: #fff;
+    background: var(--background);
     width: 100vw;
     height: 100vh;
     padding: 1.5rem;
     box-sizing: border-box;
   }
 
+  .mobileOverlayHeader {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
   .closeToggle {
-    align-self: flex-end;
     font-size: 1.5rem;
     cursor: pointer;
     margin-bottom: 2rem;
-    color: #000;
+    color: var(--foreground);
   }
 
   .overlayNav {
@@ -104,7 +120,7 @@
 
   .overlayLink {
     text-decoration: none;
-    color: #000;
+    color: var(--foreground);
     text-align: left;
     /* Fallback if Tailwind isn't available */
     font-size: 1.875rem; 
