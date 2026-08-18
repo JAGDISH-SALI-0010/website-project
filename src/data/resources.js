@@ -250,7 +250,67 @@ export const resources = [
     website: "https://keras.io/",
     tags: ["reference", "official", "core"],
     featured: true
- }
+  },
+  {
+    id: "22",
+    slug: "hackerrank-python",
+    title: "HackerRank",
+    description: "Interactive platform for beginners and intermediates to practice Python built-ins, standard modules, and basic data structures.",
+    category: "Practice Websites",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://www.hackerrank.com/domains/python",
+    tags: ["practice", "beginner-friendly", "problem-solving"],
+    featured: true
+  },
+  {
+    id: "23",
+    slug: "codewars",
+    title: "Codewars",
+    description: "Achieve code mastery through gamified challenges (Katas). Train on Python and compare elegant, idiomatic solutions with the community.",
+    category: "Practice Websites",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://www.codewars.com",
+    tags: ["katas", "gamified", "community"],
+    featured: true
+  },
+  {
+    id: "24",
+    slug: "exercism-python",
+    title: "Exercism",
+    description: "100% free, test-driven coding exercises with human mentor feedback to write clean and idiomatic Pythonic code.",
+    category: "Practice Websites",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://exercism.org/tracks/python",
+    tags: ["mentorship", "open-source", "idiomatic"],
+    featured: true
+  },
+  {
+    id: "25",
+    slug: "pybites",
+    title: "PyBites",
+    description: "Purely Python-focused bite-sized code challenges designed to master standard libraries, regex, data structures, and clean coding.",
+    category: "Practice Websites",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://pybitesplatform.com",
+    tags: ["pure-python", "bites", "real-world"],
+    featured: false
+  },
+  {
+    id: "26",
+    slug: "project-euler",
+    title: "Project Euler",
+    description: "A collection of challenging mathematical and computational problems requiring logic building and efficient algorithm design in Python.",
+    category: "Practice Websites",
+    difficulty: "Advanced",
+    image: null,
+    website: "https://projecteuler.net",
+    tags: ["math", "algorithms", "logic"],
+    featured: false
+  }
 ];
 
 export const getFeaturedResources = () => resources.filter(r => r.featured);
