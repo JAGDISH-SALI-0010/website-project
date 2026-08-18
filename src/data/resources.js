@@ -310,6 +310,78 @@ export const resources = [
     website: "https://projecteuler.net",
     tags: ["math", "algorithms", "logic"],
     featured: false
+  },
+  {
+    id: "27",
+    slug: "uv-package-manager",
+    title: "uv",
+    description: "An extremely fast Python package and project manager written in Rust. Replaces pip, pip-tools, and virtualenv with 10-100x speedups.",
+    category: "Tools",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://astral.sh/uv",
+    tags: ["package-manager", "cli", "fast"],
+    featured: true
+  },
+  {
+    id: "28",
+    slug: "ruff-linter",
+    title: "Ruff",
+    description: "An extremely fast Python linter and code formatter written in Rust. Replaces Flake8, Black, isort, and more with instant execution.",
+    category: "Tools",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://astral.sh/ruff",
+    tags: ["linter", "formatter", "tooling"],
+    featured: true
+  },
+  {
+    id: "29",
+    slug: "google-colab",
+    title: "Google Colab",
+    description: "Cloud-hosted Jupyter notebook environment requiring zero setup and offering free access to GPUs and TPUs for machine learning and data analysis.",
+    category: "Tools",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://colab.research.google.com",
+    tags: ["cloud", "jupyter", "machine-learning", "gpu"],
+    featured: true
+  },
+  {
+    id: "30",
+    slug: "pycharm",
+    title: "PyCharm",
+    description: "The premier dedicated Python IDE by JetBrains with advanced debugging, refactoring, code inspection, and test support.",
+    category: "Tools",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://www.jetbrains.com/pycharm/",
+    tags: ["ide", "editor", "jetbrains"],
+    featured: false
+  },
+  {
+    id: "31",
+    slug: "poetry",
+    title: "Poetry",
+    description: "Python packaging and dependency management made easy. Handles virtualenvs, lock files, and build/publish workflows in a unified CLI.",
+    category: "Tools",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://python-poetry.org",
+    tags: ["packaging", "dependency-management", "workflow"],
+    featured: false
+  },
+  {
+    id: "32",
+    slug: "visual-studio-code-python",
+    title: "VS Code (Python Extension)",
+    description: "Lightweight, customizable code editor with rich Python support including IntelliSense, debugging, linting, and built-in Jupyter support.",
+    category: "Tools",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://code.visualstudio.com",
+    tags: ["editor", "vscode", "lightweight"],
+    featured: true
   }
 ];
 
