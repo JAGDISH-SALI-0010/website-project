@@ -382,6 +382,66 @@ export const resources = [
     website: "https://code.visualstudio.com",
     tags: ["editor", "vscode", "lightweight"],
     featured: true
+  },
+  {
+    id: "33",
+    slug: "freecodecamp-youtube",
+    title: "freeCodeCamp.org",
+    description: "Massive library of free, comprehensive Python masterclasses covering fundamentals, data science, and web development.",
+    category: "YouTube Channels",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://www.youtube.com/@freecodecamp",
+    tags: ["video", "full-course", "beginner-friendly"],
+    featured: true
+  },
+  {
+    id: "34",
+    slug: "codewithharry-youtube",
+    title: "CodeWithHarry",
+    description: "Popular Hindi programming channel featuring in-depth 100 Days of Code Python series, projects, and interview preparation.",
+    category: "YouTube Channels",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://www.youtube.com/@CodeWithHarry",
+    tags: ["hindi", "video", "100-days-of-code", "tutorials"],
+    featured: true
+  },
+  {
+    id: "35",
+    slug: "programming-with-mosh",
+    title: "Programming with Mosh",
+    description: "Clear, structured, and easy-to-follow Python crash courses and fundamental tutorials for absolute beginners.",
+    category: "YouTube Channels",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://www.youtube.com/@programmingwithmosh",
+    tags: ["video", "beginner", "crash-course"],
+    featured: false
+  },
+  {
+    id: "36",
+    slug: "campusx-youtube",
+    title: "CampusX",
+    description: "Exceptional Hindi content dedicated to Python for Data Science, Machine Learning, Deep Learning, and end-to-end AI pipelines.",
+    category: "YouTube Channels",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://www.youtube.com/@CampusX-official",
+    tags: ["hindi", "data-science", "machine-learning", "ai"],
+    featured: true
+  },
+  {
+    id: "37",
+    slug: "bro-code-youtube",
+    title: "Bro Code",
+    description: "Fast-paced, engaging, and beginner-friendly full Python courses with practical examples and zero fluff.",
+    category: "YouTube Channels",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://www.youtube.com/@BroCodez",
+    tags: ["video", "beginner", "practical", "projects"],
+    featured: false
   }
 ];
 
