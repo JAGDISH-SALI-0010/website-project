@@ -86,7 +86,10 @@ export default function Header() {
         <nav className={styles.nav}>
 
           <Link className={styles.logo} href="/">
-            PyDisciple
+            <span className={styles.logoPy} aria-hidden="true">Py</span>
+            <span className={styles.logoDisciple} aria-hidden="true">Disciple</span>
+            {/* Screen-reader-only full text so the link reads as one word */}
+            <span className={styles.srOnly}>PyDisciple</span>
           </Link>
 
           <div className={styles.navRight}>

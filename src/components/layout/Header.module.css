@@ -29,9 +29,40 @@
 
 /* ─── Logo ─────────────────────────────────────────────────────── */
 .logo {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.125rem;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  display: inline-flex;    /* keeps the two spans side-by-side inline */
+  align-items: baseline;
+  transition: opacity 150ms ease;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+/* "Py" — accent blue, adapts correctly in light & dark via --primary-btn */
+.logoPy {
+  color: var(--primary-btn);
+}
+
+/* "Disciple" — normal foreground, follows theme automatically */
+.logoDisciple {
+  color: var(--foreground);
+}
+
+/* Screen-reader-only: visually hidden but still in the a11y tree */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ─── Desktop Nav Links ────────────────────────────────────────── */
