@@ -442,6 +442,120 @@ export const resources = [
     website: "https://www.youtube.com/@BroCodez",
     tags: ["video", "beginner", "practical", "projects"],
     featured: false
+  },
+
+  // ── GitHub Repositories ──────────────────────────────────────────────────
+  {
+    id: "38",
+    slug: "awesome-python",
+    title: "Awesome Python",
+    description: "A curated list of awesome Python frameworks, libraries, software and resources. The definitive community-maintained index for discovering Python packages across every domain.",
+    category: "GitHub Repository",
+    difficulty: "All Levels",
+    image: null,
+    website: "https://github.com/vinta/awesome-python",
+    tags: ["curated-list", "libraries", "frameworks", "community"],
+    featured: true
+  },
+  {
+    id: "39",
+    slug: "thealgorithms-python",
+    title: "TheAlgorithms / Python",
+    description: "All algorithms implemented in Python — sorting, searching, graph traversal, dynamic programming, and more. Great for interview prep and learning CS fundamentals through readable code.",
+    category: "GitHub Repository",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://github.com/TheAlgorithms/Python",
+    tags: ["algorithms", "data-structures", "interview", "computer-science"],
+    featured: true
+  },
+  {
+    id: "40",
+    slug: "30-days-of-python",
+    title: "30 Days of Python",
+    description: "A step-by-step, 30-day Python programming challenge repo covering everything from basics to advanced topics like decorators, file I/O, and web scraping — with exercises and solutions.",
+    category: "GitHub Repository",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://github.com/Asabeneh/30-Days-Of-Python",
+    tags: ["challenge", "exercises", "beginner", "30-days"],
+    featured: false
+  },
+
+  // ── Colab Notebooks ──────────────────────────────────────────────────────
+  {
+    id: "41",
+    slug: "python-numpy-pandas-colab",
+    title: "Python, NumPy & Pandas Crash Course",
+    description: "An interactive Google Colab notebook by freeCodeCamp covering Python fundamentals, NumPy array operations, and Pandas DataFrames — runnable in-browser with no local setup required.",
+    category: "Colab Notebooks",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://colab.research.google.com/github/ine-rmotr-curriculum/freecodecamp-intro-to-numpy/blob/master/tutorial/00-Intro-to-Numpy.ipynb",
+    tags: ["numpy", "pandas", "interactive", "beginner"],
+    featured: true
+  },
+  {
+    id: "42",
+    slug: "ml-crash-course-colab",
+    title: "Google ML Crash Course — Colab Exercises",
+    description: "Official Google Machine Learning Crash Course notebooks. Walk through linear regression, classification, neural networks, and more using TensorFlow and scikit-learn, all inside Colab.",
+    category: "Colab Notebooks",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/tensorflow_programming_concepts.ipynb",
+    tags: ["machine-learning", "tensorflow", "google", "exercises"],
+    featured: true
+  },
+  {
+    id: "43",
+    slug: "matplotlib-visualization-colab",
+    title: "Data Visualization with Matplotlib & Seaborn",
+    description: "A hands-on Colab notebook covering charts, subplots, histograms, heatmaps, and statistical plots using Matplotlib and Seaborn — perfect for data science beginners.",
+    category: "Colab Notebooks",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/04.00-Introduction-To-Matplotlib.ipynb",
+    tags: ["visualization", "matplotlib", "seaborn", "data-science"],
+    featured: false
+  },
+
+  // ── Notes ─────────────────────────────────────────────────────────────────
+  {
+    id: "44",
+    slug: "python-basics-notes",
+    title: "Python Basics — Complete Study Notes",
+    description: "Comprehensive beginner study notes covering Python syntax, variables, data types, conditionals, loops, functions, and modules. Ideal as a concise reference while following any Python course.",
+    category: "Notes",
+    difficulty: "Beginner",
+    image: null,
+    website: "https://drive.google.com/file/d/1rUUZEHRK7_R24wMLNmC_GtbX83_b3l9H/view",
+    tags: ["notes", "syntax", "beginner", "reference"],
+    featured: true
+  },
+  {
+    id: "45",
+    slug: "python-oop-notes",
+    title: "Python OOP — Object-Oriented Programming Notes",
+    description: "Detailed notes on Python's object-oriented programming model: classes, objects, inheritance, encapsulation, polymorphism, dunder methods, and dataclasses — with clear examples throughout.",
+    category: "Notes",
+    difficulty: "Intermediate",
+    image: null,
+    website: "https://drive.google.com/file/d/1OhnX94l5ZsPgy8H_z0W6BnEfVOApcGaU/view",
+    tags: ["notes", "oop", "classes", "intermediate"],
+    featured: true
+  },
+  {
+    id: "46",
+    slug: "python-data-structures-notes",
+    title: "Python Data Structures & Algorithms Notes",
+    description: "Structured reference notes on Python's built-in data structures (lists, dicts, sets, tuples) and core algorithm patterns (sorting, searching, recursion, complexity analysis) — great for interview prep.",
+    category: "Notes",
+    difficulty: "Advanced",
+    image: null,
+    website: "https://drive.google.com/file/d/1SH87ZgM2uIHn8fLDJAMkLaWfF3NTyQLy/view",
+    tags: ["notes", "data-structures", "algorithms", "interview"],
+    featured: false
   }
 ];
 
