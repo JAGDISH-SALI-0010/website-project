@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import styles from "./Header.module.css";
 import ThemeToggle from "@/components/shared/ThemeToggle";
+import LogoIcon from "@/components/shared/LogoIcon";
 import { getCategories } from "@/data/resources";
 
 // Grouped category structure for the premium mega-menu
@@ -86,6 +87,7 @@ export default function Header() {
         <nav className={styles.nav}>
 
           <Link className={styles.logo} href="/">
+            <LogoIcon size={28} className={styles.logoIcon} />
             <span className={styles.logoPy} aria-hidden="true">Py</span>
             <span className={styles.logoDisciple} aria-hidden="true">Disciple</span>
             {/* Screen-reader-only full text so the link reads as one word */}
