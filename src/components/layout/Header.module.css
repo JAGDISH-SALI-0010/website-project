@@ -1,3 +1,4 @@
+/* ─── Header Shell ─────────────────────────────────────────────── */
 .header {
   position: sticky;
   top: 0;
@@ -12,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3.5rem; /* ~56px */
+  height: 3.5rem; /* ~56px — unchanged */
 }
 
 .navRight {
@@ -26,14 +27,17 @@
   align-items: center;
 }
 
+/* ─── Logo ─────────────────────────────────────────────────────── */
 .logo {
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: -0.015em;
 }
 
+/* ─── Desktop Nav Links ────────────────────────────────────────── */
 .links {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -49,17 +53,184 @@
   opacity: 1;
 }
 
-/* Hidden checkbox */
-.checkboxToggle {
-  display: none;
+/* ─── Categories Wrapper ───────────────────────────────────────── */
+/* The <li> holding both the trigger button and the dropdown panel */
+.categoryWrapper {
+  position: relative;
 }
 
-/* Hamburger Icon */
+/* Trigger button — styled identically to .link but as a <button> */
+.categoryTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/* Chevron icon next to "Categories" label */
+.triggerChevron {
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+  opacity: 0.65;
+}
+
+.triggerChevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ─── Desktop Dropdown Panel ───────────────────────────────────── */
+.dropdownPanel {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px); /* closed: shifted up */
+  width: 620px;
+  background: var(--card-bg);
+  /* Subtle 1px inner border for depth */
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  /* Soft, diffused shadow */
+  box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.14),
+              0 4px 16px -4px rgba(0, 0, 0, 0.06);
+  padding: 1.75rem 2rem 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease-out, transform 220ms ease-out;
+  z-index: 200;
+}
+
+[data-theme='dark'] .dropdownPanel {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.6),
+              0 4px 20px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* Small caret pointing up at the trigger */
+.dropdownPanel::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 9px;
+  height: 9px;
+  background: var(--card-bg);
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 2px 0 0 0;
+}
+
+[data-theme='dark'] .dropdownPanel::before {
+  border-left-color: rgba(255, 255, 255, 0.08);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Open state */
+.dropdownVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ─── "All Categories" shortcut row ───────────────────────────── */
+.dropdownAllRow {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.dropdownItemAll {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  opacity: 0.55;
+}
+
+.dropdownItemAll:hover {
+  opacity: 1;
+  color: var(--primary-btn);
+}
+
+/* ─── Grouped columns layout ───────────────────────────────────── */
+.dropdownGroups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 1.5rem;
+}
+
+.dropdownGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Group micro-label */
+.dropdownGroupLabel {
+  display: block;
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  opacity: 0.35;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Items within a group */
+.dropdownGroupItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+/* ─── Individual dropdown item ─────────────────────────────────── */
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 0.45rem 0.5rem;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdownItem:hover {
+  background: var(--chip-hover);
+  color: var(--primary-btn);
+}
+
+.dropdownItem:focus-visible {
+  outline: 2px solid var(--primary-btn);
+  outline-offset: -1px;
+  border-radius: 9px;
+}
+
+/* ─── Hamburger Button ─────────────────────────────────────────── */
 .menuToggle {
   display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  -webkit-tap-highlight-color: transparent;
+  /* Ensure it isn't covered by ThemeToggle's z-index:10 stacking context */
+  position: relative;
+  z-index: 1;
 }
 
 .hamburgerLine {
@@ -70,33 +241,44 @@
   border-radius: 2px;
 }
 
-/* Mobile Overlay Base */
+/*
+ * ─── Mobile Overlay ─────────────────────────────────────────────
+ * IMPORTANT: No display:none here.
+ * This overlay is *conditionally rendered* by React (only in DOM
+ * when menuOpen=true), so CSS does NOT need to hide it.
+ * Putting display:none here would fight the media-query override
+ * and could prevent the overlay from appearing on some devices.
+ * All overlay layout rules live here, always active.
+ */
 .mobileOverlay {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--background);
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem;
+  overflow-y: auto;
 }
 
+/* ─── Mobile Breakpoint ────────────────────────────────────────── */
 @media (max-width: 768px) {
+
+  /* Hide desktop links */
   .links {
-    display: none; /* Hide desktop links on mobile */
+    display: none;
   }
 
+  /* Show hamburger */
   .menuToggle {
-    display: flex; /* Show hamburger on mobile */
+    display: flex;
   }
 
-  /* Overlay shown when checkbox is checked */
-  .checkboxToggle:checked ~ .mobileOverlay {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: var(--background);
-    width: 100vw;
-    height: 100vh;
-    padding: 1.5rem;
-    box-sizing: border-box;
-  }
+  /* mobileOverlay styles are defined above (outside media query)
+   * so they always apply when the element is in the DOM.
+   * No duplication needed here. */
 
   .mobileOverlayHeader {
     display: flex;
@@ -107,8 +289,12 @@
   .closeToggle {
     font-size: 1.5rem;
     cursor: pointer;
-    margin-bottom: 2rem;
     color: var(--foreground);
+    background: none;
+    border: none;
+    font-family: inherit;
+    padding: 0.25rem;
+    line-height: 1;
   }
 
   .overlayNav {
@@ -118,12 +304,95 @@
     margin-top: 2rem;
   }
 
+  /* Shared style for Resources, Categories accordion trigger, and About */
   .overlayLink {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--foreground);
     text-align: left;
-    /* Fallback if Tailwind isn't available */
-    font-size: 1.875rem; 
+    font-size: 1.875rem;
     font-weight: 700;
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
   }
+
+  /* Accordion trigger: space-between so chevron sits on the right */
+  .overlayAccordionBtn {
+    justify-content: space-between;
+  }
+
+  /* ─── Mobile Accordion ───────────────────────────────────── */
+  .mobileAccordion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Chevron that rotates when accordion opens */
+  .mobileChevron {
+    transition: transform 200ms ease;
+    flex-shrink: 0;
+  }
+
+  .mobileChevronOpen {
+    transform: rotate(180deg);
+  }
+
+  /*
+   * grid-template-rows trick for smooth height animation:
+   * 0fr = collapsed (no layout height), 1fr = natural content height.
+   * The inner div must have overflow:hidden to suppress its min-size
+   * contribution so the 0fr track truly collapses to 0.
+   */
+  .mobileCatList {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobileCatListOpen {
+    grid-template-rows: 1fr;
+  }
+
+  .mobileCatListInner {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    /* Top padding: adds breathing room below the trigger when expanded */
+    padding-top: 0.5rem;
+  }
+
+  /* Individual category link inside the mobile accordion */
+  .mobileCatLink {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem 0.5rem 1.5rem; /* indent to show hierarchy */
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--foreground);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 150ms ease;
+    opacity: 0.85;
+  }
+
+  .mobileCatLink:hover,
+  .mobileCatLink:active {
+    background: var(--chip-hover);
+    opacity: 1;
+  }
+
+  .mobileCatLink:focus-visible {
+    outline: 2px solid var(--primary-btn);
+    outline-offset: -2px;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
 }
+
