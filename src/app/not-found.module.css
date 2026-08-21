@@ -1,0 +1,101 @@
+/* ─── Full-viewport centred layout ───────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  max-width: 520px;
+  width: 100%;
+}
+
+/* ─── Animation ──────────────────────────────────────────────────────────── */
+.animationWrapper {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1; /* keeps it square; dotlottie handles internal ratio */
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+
+/* Large "404" number */
+.code {
+  font-size: 7rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  background: linear-gradient(90deg, #0071e3, #42a1ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: -0.25rem; /* tighten gap between heading and subheading */
+}
+
+/* "This page drifted off course" */
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+/* Supporting description */
+.subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  opacity: 0.65;
+  max-width: 380px;
+}
+
+/* ─── CTA button row ─────────────────────────────────────────────────────── */
+.actions {
+  margin-top: 0.5rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .code {
+    font-size: 5rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .animationWrapper {
+    max-width: 280px;
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable slide-up animations on this page */
+  .animationWrapper,
+  .code,
+  .title,
+  .subtitle,
+  .actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
