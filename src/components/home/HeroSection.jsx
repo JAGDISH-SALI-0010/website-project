@@ -6,14 +6,11 @@ export default function HeroSection() {
     <section className={styles.hero}>
       <div className="container">
         <div className={styles.content}>
-          <p className={`${styles.brand} slide-up`}>
-            PYDISCIPLE
-          </p>
-          <h1 className={`${styles.title} slide-up delay-1`}>
+          <h1 className={`${styles.title} slide-up`}>
             Master Python. <br className={styles.break} />
             <span className={styles.gradient}>Without the noise.</span>
           </h1>
-          <p className={`${styles.subtitle} slide-up delay-2`}>
+          <p className={`${styles.subtitle} slide-up delay-1`}>
             Discover the highest-quality, curated learning resources for Python.
             From official docs to advanced courses—all in one place.
           </p>
