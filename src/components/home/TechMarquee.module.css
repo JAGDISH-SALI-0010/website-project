@@ -1,8 +1,10 @@
 /* ─── Section ─────────────────────────────────────────────────── */
 .section {
   background: var(--background);
-  padding: 4.5rem 0;
+  padding: 3.5rem 0;
   margin-top: -2rem;
+  border-top: 1px solid var(--nav-border);
+  border-bottom: 1px solid var(--nav-border);
 }
 
 /* ─── Tagline ─────────────────────────────────────────────────── */
@@ -88,7 +90,8 @@
   transition:
     opacity      0.2s ease,
     border-color 0.2s ease,
-    box-shadow   0.2s ease;
+    box-shadow   0.2s ease,
+    transform    0.2s ease;
 }
 
 /* Per-card hover — kicks in when the marquee is paused on wrapper hover */
@@ -96,6 +99,8 @@
   opacity: 1;
   border-color: var(--card-border);
   box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 /* Also brighten the whole row while wrapper is hovered (scroll paused) */

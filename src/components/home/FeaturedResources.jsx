@@ -10,6 +10,7 @@ export default function FeaturedResources() {
     <section className={styles.section}>
       <div className="container">
         <SectionHeading 
+          label="Handpicked for You"
           title="Featured Resources" 
           subtitle="Hand-picked tools, courses, and documentation to accelerate your Python journey."
         />

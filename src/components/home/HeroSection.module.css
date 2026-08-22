@@ -1,5 +1,5 @@
 .hero {
-  padding: 8rem 0 6rem;
+  padding: 8rem 0 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +63,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 3rem;
   }
   
   .title {

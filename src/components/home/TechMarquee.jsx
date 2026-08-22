@@ -12,6 +12,7 @@ import {
   SiScikitlearn,
   SiPostgresql,
 } from "react-icons/si";
+import Link from "next/link";
 import styles from "./TechMarquee.module.css";
 
 const TECH_ITEMS = [
@@ -42,17 +43,17 @@ export default function TechMarquee() {
         <div className={styles.track} aria-hidden="true">
           {/* First copy */}
           {TECH_ITEMS.map(({ name, Icon }) => (
-            <span key={`a-${name}`} className={styles.item}>
+            <Link key={`a-${name}`} href="/resources" className={styles.item}>
               <Icon className={styles.icon} aria-hidden="true" />
               <span>{name}</span>
-            </span>
+            </Link>
           ))}
           {/* Exact duplicate → enables seamless -50% loop */}
           {TECH_ITEMS.map(({ name, Icon }) => (
-            <span key={`b-${name}`} className={styles.item}>
+            <Link key={`b-${name}`} href="/resources" className={styles.item}>
               <Icon className={styles.icon} aria-hidden="true" />
               <span>{name}</span>
-            </span>
+            </Link>
           ))}
         </div>
 

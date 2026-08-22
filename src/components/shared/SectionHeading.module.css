@@ -3,6 +3,17 @@
   text-align: center;
 }
 
+/* Eyebrow label — sits above the main title */
+.label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  opacity: 0.4;
+  margin-bottom: 0.75rem;
+}
+
 .title {
   font-size: 2.5rem;
   font-weight: 700;
