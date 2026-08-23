@@ -3,8 +3,15 @@ import ResourceDirectory from "@/components/resources/ResourceDirectory";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Resources | PyDisciple",
- description: "Browse curated Python resources, books, courses, documentation, roadmaps, and tools on PyDisciple.",
+  title: 'Python Resources',
+  description:
+    'Browse a hand-picked directory of the best Python learning resources — books, video courses, official documentation, structured roadmaps, cheat sheets, and developer tools — all free to access.',
+  openGraph: {
+    title: 'Python Resources — PyDisciple',
+    description:
+      'Hand-picked Python books, courses, docs, roadmaps, and tools. Everything a Python learner needs, curated in one place.',
+    url: 'https://pydisciple.vercel.app/resources',
+  },
 };
 
 export default function ResourcesPage() {

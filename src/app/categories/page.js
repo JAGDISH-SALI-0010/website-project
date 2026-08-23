@@ -4,8 +4,15 @@ import Link from "next/link";
 import styles from "./Categories.module.css";
 
 export const metadata = {
-  title: "Categories | PyDisciple",
-  description: "Browse curated Python learning categories on PyDisciple.",
+  title: 'Browse by Category',
+  description:
+    'Explore Python learning resources organized by category — from core fundamentals and data science to web development, automation, and beyond. Find exactly what you need, fast.',
+  openGraph: {
+    title: 'Python Learning Categories — PyDisciple',
+    description:
+      'Browse curated Python resources by topic: fundamentals, data science, web frameworks, automation, tools, and more.',
+    url: 'https://pydisciple.vercel.app/categories',
+  },
 };
 
 export default function CategoriesPage() {

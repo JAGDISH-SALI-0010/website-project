@@ -3,8 +3,15 @@ import { LuShieldCheck, LuRefreshCw, LuSparkles, LuUsers, LuArrowUpRight, LuGem,
 import styles from "./About.module.css";
 
 export const metadata = {
-  title: "About | PyDisciple",
-  description: "Learn more about PyDisciple and our mission to help developers master Python.",
+  title: 'About PyDisciple',
+  description:
+    'Learn about PyDisciple — an independent, community-driven project dedicated to curating the best Python learning resources. No ads, no clutter, just quality.',
+  openGraph: {
+    title: 'About PyDisciple — Our Mission & Curation Principles',
+    description:
+      'PyDisciple is built for Python learners by Python enthusiasts. Discover how we curate resources and why quality beats quantity.',
+    url: 'https://pydisciple.vercel.app/about',
+  },
 };
 
 export default function AboutPage() {
