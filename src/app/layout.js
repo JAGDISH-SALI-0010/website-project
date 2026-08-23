@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://pydisciple.vercel.app'),
-
+  verification: { google: 'fKMpWCUQCU3Eu2TddF0Q6euCAIGWe9f0NU6cLCbGNnw' },
   title: {
     default: 'PyDisciple — Curated Python Learning Resources',
     template: '%s | PyDisciple',
